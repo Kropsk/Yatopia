@@ -41,6 +41,10 @@ jobs:
     - name: Apply Patches
       run: |
         ./gradlew applyPatches
+        
+    - name: Paperclip
+      run: |
+        ./gradlew paperclip
                  
     - name: Get MC Version
       run: echo "::set-output name=mcver::$(cat ".gradle/caches/paperweight/upstreams/paper/work/BuildData/info.json"  | grep minecraftVersion | cut -d '"' -f 4)" 
